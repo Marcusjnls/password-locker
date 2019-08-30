@@ -1,5 +1,5 @@
 import unittest # Importing the unittest module
-from User import User # Importing the contact class
+from user import User # Importing the contact class
 
 class TestUser(unittest.TestCase):
 
@@ -38,4 +38,16 @@ class TestUser(unittest.TestCase):
         '''
 
         User.user_list = []
+
+    def test_save_multiple_users(self):
+
+        '''
+        Check if we can save multiple user objects to our user_list
+        '''
+        
+        self.new_user.save_user()
+        test_user = User("Luke", "Skywalker", "darthvader", "iamyourfather")
+        test_user.save_user()
+
+        self.assertEqual(len(User.user_list),2)
 
