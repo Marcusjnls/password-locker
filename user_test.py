@@ -81,3 +81,8 @@ class TestUser(unittest.TestCase):
         '''
 
         self.assertEqual(User.display_userInfo(),User.user_list)
+
+class TestAccount(unittest.TestCase):
+    def setUp(self):
+
+        self.new_account = Account("Twitter", "marcusjnls", "password1234")
