@@ -86,6 +86,9 @@ class Account:
 
     @classmethod
     def find_by_accountName(cls,accountname):
+        '''
+        method that allows users to search for accounts by account name
+        '''
         for account in cls.account_list:
             if account.account_name == accountname:
                 return account
