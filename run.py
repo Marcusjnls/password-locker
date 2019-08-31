@@ -26,3 +26,6 @@ def find_user(username):
     function to search for users
     '''
     return User.find_by_username(username)
+
+def display_user():
+    return User.display_userInfo()
