@@ -70,7 +70,10 @@ def find_account_credentials(accountname):
 
 
 def main():
-
+    print("Hello there!Welcome to Password Locker.What is your name?")
+        name = input()
+        print(f"Hello {name}!To start off please choose one of the options below:")
+        print('\n')
 
 
 
