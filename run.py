@@ -25,9 +25,15 @@ def delete_user(user):
 
 def find_user(username):
     '''
-    function to search for users
+    function to search for users by username
     '''
     return User.find_by_username(username)
+
+def find_password(userpassword):
+    '''
+    function to search for users by passwords
+    '''
+    return User.find_by_userpassword(userpassword)
 
 def display_user():
     '''
@@ -71,9 +77,9 @@ def find_account_credentials(accountname):
 
 def main():
     print("Welcome to Password Locker. What is your name?")
-        name = input()
-        print(f"Hello {name}! To start off please choose one of the options below:")
-        print('\n')
+    name = input()
+    print(f"Hello {name}! To start off please choose one of the options below:")
+    print('\n')
 
     while True:
         print("Use these short-codes for: su - SignUp  or  lg - Login")
@@ -127,7 +133,7 @@ def main():
                     accountpassword = input()
 
                     save_account(create_account(accountname,accountusername,accountpassword)) #create and save new Account
-                    print(f"Account Name:{accountname}, Account Username:{accountusername}, Account Password:{accountpassword}
+                    print(f"Account Name:{accountname}, Account Username:{accountusername}, Account Password:{accountpassword}")
 
                 elif account_choice == "da":
                     if display_account_credentials():

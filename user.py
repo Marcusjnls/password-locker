@@ -49,9 +49,21 @@ class User:
         for user in cls.user_list:
             if user.user_name == username:
                 return user
+    
+    @classmethod
+    def find_by_userpassword(cls,userpassword):
+        '''
+        function that searches for usernames
+        '''
+        for password in cls.user_list:
+            if password.password == userpassword:
+                return password
 
     @classmethod
     def display_userInfo(cls):
+        '''
+        function that displays users info
+        '''
         return cls.user_list
 
 
@@ -60,7 +72,9 @@ class Account:
     account_list = []
 
     def __init__(self, account_name, account_userName, account_password):
-
+        '''
+        function that initialises objects
+        '''
         self.account_name = account_name
         self.account_userName = account_userName
         self.account_password = account_password
